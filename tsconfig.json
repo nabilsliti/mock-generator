@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "allowUnreachableCode": false,
+      "declaration": true,
+      "declarationDir": "../types",
+      "experimentalDecorators": true,
+      "lib": [
+          "dom",
+          "es2019",
+          "ESNext"
+      ],
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "module": "esnext",
+      "target": "es2019",
+      "skipLibCheck": true
+  },
+  "include": [
+      "src"
+  ],
+  "exclude": [
+      "node_modules",
+      "dist"
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/**/*.ts"],
+    "out": "docs",
+    "name": "Mock Api documentation"
+}
+}
