@@ -26,6 +26,9 @@
   "typedocOptions": {
     "entryPoints": ["src/**/*.ts"],
     "out": "docs",
-    "name": "Mock Api documentation"
+    "name": "mock-generator documentation",
+    "exclude": [
+        "src/examples/**"
+    ]
 }
 }
