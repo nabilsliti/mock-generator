@@ -49,7 +49,7 @@ export default {
     plugins: [
         typescript(), // this will transpile TypeScript to JavaScript
         commonjs(),
-        multi() // this will export all the named exports from each file
+        multi({ exclude: [ 'src/examples/**' ] }) // this will export all the named exports from each file
     ],
     external: [ 'uuid', 'lorem-ipsum', 'date-fns', 'randexp' ]
 };
