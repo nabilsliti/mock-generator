@@ -8,6 +8,9 @@ Generate a mock data using a schema definition
 npm install mock-generator
 ```
 
+### Module system
+`mock-generator` was built in 3 modules: `esm`, `cjs` and `browser`.
+
 ### Use
 
 ```js
