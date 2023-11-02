@@ -1,7 +1,7 @@
 import { EMAIL_DOMAINS } from '../constants';
-import { IEmail } from '../interfaces';
-import { getRandomItem } from '../utils';
 import { generateRandomWord } from './word';
+import { getRandomItem } from '../utils';
+import { IEmail } from '../interfaces';
 
 /**
  * Generate a random email

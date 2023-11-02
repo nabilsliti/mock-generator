@@ -1,36 +1,36 @@
-import {
-    ISchema,
-    IOptions,
-    ICollection,
-    ICollectionField,
-    ISimpleField,
-    IWord,
-    INumber,
-    IRegex,
-    ISentence,
-    ITime,
-    IDate,
-    IDateTime,
-    IUrl,
-    IEmail
-} from './interfaces';
+import { DEFAULT_ARRAY_LENGTH } from './constants';
+import { EKeys, EType } from './enums';
 import {
     generateRandomBoolean,
     generateRandomDate,
     generateRandomDateTime,
-    generateRandomTime,
     generateRandomEmail,
     generateRandomId,
     generateRandomIPAddress,
     generateRandomNumber,
     generateRandomRegex,
-    generateRandomWord,
     generateRandomSentence,
-    generateRandomUrl
+    generateRandomTime,
+    generateRandomUrl,
+    generateRandomWord
 } from './generators';
-import { DEFAULT_ARRAY_LENGTH } from './constants';
-import { EKeys, EType } from './enums';
 import { getRandomItem } from './utils';
+import {
+    ICollection,
+    ICollectionField,
+    IDate,
+    IDateTime,
+    IEmail,
+    INumber,
+    IOptions,
+    IRegex,
+    ISchema,
+    ISentence,
+    ISimpleField,
+    ITime,
+    IUrl,
+    IWord
+} from './interfaces';
 
 /**
  * Generate a random value for a given type

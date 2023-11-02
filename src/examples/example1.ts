@@ -1,5 +1,5 @@
-import { ISchema } from '../interfaces';
 import { generateRandomData } from '../random-generator';
+import { ISchema } from '../interfaces';
 
 const schema : ISchema = {
     id: 'id',

@@ -1,7 +1,7 @@
 import { DOMAINS, PROTOCOLS } from '../constants';
-import { IUrl } from '../interfaces';
-import { getRandomItem } from '../utils';
 import { generateRandomWord } from './word';
+import { getRandomItem } from '../utils';
+import { IUrl } from '../interfaces';
 
 /**
  * Generate random url

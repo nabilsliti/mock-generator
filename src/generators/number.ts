@@ -1,5 +1,5 @@
-import { MAXIMUM_NUMBER, MINIMUM_NUMBER } from '../constants';
 import { INumber } from '../interfaces';
+import { MAXIMUM_NUMBER, MINIMUM_NUMBER } from '../constants';
 
 /**
  * Generate a random number

@@ -1,7 +1,7 @@
-import { loremIpsum } from 'lorem-ipsum';
-import { ISentence } from '../interfaces';
-import { MAXIMUM_WORD, MINIMUM_WORD } from '../constants';
 import { getRandomItem } from '../utils';
+import { ISentence } from '../interfaces';
+import { loremIpsum } from 'lorem-ipsum';
+import { MAXIMUM_WORD, MINIMUM_WORD } from '../constants';
 
 /**
  * Generate a random sentence

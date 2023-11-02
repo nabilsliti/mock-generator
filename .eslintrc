@@ -2,7 +2,8 @@
     "root": true,
     "parser": "@typescript-eslint/parser",
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "sort-imports-es6-autofix"
     ],
     "extends": [
         "eslint:recommended",
@@ -90,6 +91,19 @@
             "asyncArrow": "always"
         }],
         "arrow-spacing": 2,
-        "space-in-parens": ["error", "never"]
+        "space-in-parens": ["error", "never"],
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            "error",
+            {
+                "ignoreCase": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": [
+                    "none",
+                    "all",
+                    "multiple",
+                    "single"
+                ]
+            }
+        ],
     }
 }

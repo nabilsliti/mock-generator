@@ -1,6 +1,6 @@
 import { FORMAT_TIME } from '../constants';
-import { ITime } from '../interfaces';
 import { generateRandomDateTime } from './dateTime';
+import { ITime } from '../interfaces';
 
 /**
  * Generate a random time

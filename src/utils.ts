@@ -1,4 +1,3 @@
-
 /**
  *  Return a random item from the given values
  * @param {Array<string>} array - List of values

@@ -1,5 +1,5 @@
-import RandExp from 'randexp';
 import { IRegex } from '../interfaces';
+import RandExp from 'randexp';
 
 /**
  * Generate a random value matching the regex pattern

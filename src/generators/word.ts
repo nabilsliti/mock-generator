@@ -1,6 +1,6 @@
-import { loremIpsum } from 'lorem-ipsum';
-import { IWord } from '../interfaces';
 import { getRandomItem } from '../utils';
+import { IWord } from '../interfaces';
+import { loremIpsum } from 'lorem-ipsum';
 
 /**
  * Generate a random word

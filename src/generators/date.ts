@@ -1,6 +1,6 @@
 import { FORMAT_DATE, START_DATE } from '../constants';
-import { IDate } from '../interfaces';
 import { generateRandomDateTime } from './dateTime';
+import { IDate } from '../interfaces';
 
 /**
  * Generate a random date value

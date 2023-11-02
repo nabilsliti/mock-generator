@@ -1,7 +1,7 @@
-import typescript from '@rollup/plugin-typescript';
-import terser from '@rollup/plugin-terser';
-import multi from '@rollup/plugin-multi-entry';
 import commonjs from '@rollup/plugin-commonjs';
+import multi from '@rollup/plugin-multi-entry';
+import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
     input: 'src/**/*.ts', // this will match all the TypeScript files in the src folder and subfolders

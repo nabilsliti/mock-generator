@@ -1,6 +1,6 @@
-import { addYears, differenceInMilliseconds, format, compareAsc } from 'date-fns';
-import { IDateTime } from '../interfaces';
+import { addYears, compareAsc, differenceInMilliseconds, format } from 'date-fns';
 import { FORMAT_DATE_TIME, START_DATE } from '../constants';
+import { IDateTime } from '../interfaces';
 
 /**
  * Generate a random dateTime value
