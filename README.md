@@ -20,10 +20,30 @@ const generator = require("mock-generator");
 
 ## API Documentation
 
-See [API doc](https://nabilsliti.github.io/mock-generator/).
+See Full [API documentation](https://nabilsliti.github.io/mock-generator/).
+
+#### Functions:
+
+- [ generateRandomData(schema, length): ICollection[]](https://nabilsliti.github.io/mock-generator/functions/random_generator.generateRandomData.html#generateRandomData)
+- [generateRandomArray(type?, length?, options?): ISimpleField[]](https://nabilsliti.github.io/mock-generator/functions/random_generator.generateRandomArray.html#generateRandomArray)
+- [generateRandomBoolean(): boolean]()
+- [generateRandomDate(options?: IDate): string](https://nabilsliti.github.io/mock-generator/functions/generators_date.generateRandomDate.html#generateRandomDate)
+- [generateRandomDateTime(options?: IDateTime): string](https://nabilsliti.github.io/mock-generator/functions/generators_dateTime.generateRandomDateTime.html#generateRandomDateTime)
+- [generateRandomTime(options?: ITime): string](https://nabilsliti.github.io/mock-generator/functions/generators_time.generateRandomTime.html#generateRandomTime)
+- [generateRandomEmail(options?: IEmail): string](https://nabilsliti.github.io/mock-generator/functions/generators_email.generateRandomEmail.html#generateRandomEmail)
+- [generateRandomId()](https://nabilsliti.github.io/mock-generator/functions/generators_id.generateRandomId.html#generateRandomId)
+- [generateRandomIPAddress()](https://nabilsliti.github.io/mock-generator/functions/generators_ip.generateRandomIPAddress.html#generateRandomIPAddress)
+- [generateRandomNumber(options?: INumber)](https://nabilsliti.github.io/mock-generator/functions/generators_number.generateRandomNumber.html#generateRandomNumber)
+- [generateRandomRegex(options: IRegex): string](https://nabilsliti.github.io/mock-generator/functions/generators_regex.generateRandomRegex.html#generateRandomRegex)
+- [generateRandomSentence(options?: ISentence): string](https://nabilsliti.github.io/mock-generator/functions/generators_sentence.generateRandomSentence.html#generateRandomSentence)
+- [generateRandomUrl(options?: IUrl): string](https://nabilsliti.github.io/mock-generator/functions/generators_url.generateRandomUrl.html#generateRandomUrl)
+- [generateRandomWord(options?: IWord): string](https://nabilsliti.github.io/mock-generator/functions/generators_word.generateRandomWord.html#generateRandomWord)
 
 ## Example
-
+See two examples
+ - [example 1 ](./examples/example1.ts)
+ - [example 2 ](./examples/exmaple2.ts)
+  
 ```javascript
 import { generateRandomData } from "mock-generator";
 
