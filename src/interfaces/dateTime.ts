@@ -8,14 +8,14 @@ import { ICollection } from './collection';
  * @property {Date} _min_ - The minimum date value
  * @property {Date} _max_ - The maximum date value
  * @property {string} _format_ - The format of the dateTime (use date-fns dateTime format)
- * @property {ICollection} _options_ - The date-fns options to be passed to the format function
- * options = {
+ * @property {ICollection} _options_ - `The date-fns options` to be passed to the format function
+ * `_options_ = {
         locale?: Locale
         weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6
         firstWeekContainsDate?: number
         useAdditionalWeekYearTokens?: boolean
         useAdditionalDayOfYearTokens?: boolean
-    }
+    }`
  */
 export interface IDateTime {
     _type_: EType.DATE_TIME;

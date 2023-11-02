@@ -17,6 +17,7 @@ import { IDateTime } from '../interfaces';
         useAdditionalWeekYearTokens?: boolean
         useAdditionalDayOfYearTokens?: boolean
     }
+ * @throws {Error} Error if `_max_ < _min_`
  * @returns {string} random dateTime value
  */
 
