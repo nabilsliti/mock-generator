@@ -16,4 +16,9 @@ EType.REGEX |
 EType.WORD |
 EType.URL |
 EType.SENTENCE |
-EType.CUSTOM;
+EType.CUSTOM |
+EType.ZIP_CODE |
+EType.CITY |
+EType.COUNTRY |
+EType.CURRENCY |
+EType.COUNTRY_CODE;

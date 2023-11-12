@@ -1,6 +1,19 @@
-export * from './array';
-export * from './number';
-export * from './date';
-export * from './sentence';
-export * from './url';
-export * from './email';
+
+export const DEFAULT_ARRAY_LENGTH = 10;
+export const START_DATE = new Date();
+export const FORMAT_DATE = 'dd/MM/yyyy';
+export const FORMAT_DATE_TIME = 'yyyy-MM-dd\'T\'HH:mm:ss.SSSXXX';
+export const FORMAT_TIME = 'HH:mm:ss';
+export const MINIMUM_NUMBER = 1;
+export const MAXIMUM_NUMBER = 1000;
+export const MINIMUM_WORD = 10;
+export const MAXIMUM_WORD = 30;
+export const DEFAULT_ZIP_CODE_FORMAT = '5d';
+export const PROTOCOLS = [ 'http', 'https', 'ftp', 'ftps' ];
+export const EMAIL_DOMAINS = [ 'gmail.com', 'gmail.ca', 'yahoo.com', 'hotmail.com', 'gmail.de', 'outlook.com', 'mail.com', 'yahoo.it',
+    'icloud.com', 'live.com', 'msn.com', 'yahoo.fr', 'inbox.com', 'aol.com', 'zoho.com', 'yahoo.de' ];
+export const DOMAINS = [ 'google.com', 'facebook.com', 'twitter.com', 'amazon.com', 'youtube.com', 'reddit.com', 'linkedin.com', 'ebay.com',
+    'wikipedia.org', 'instagram.com', 'microsoft.com', 'apple.com', 'yahoo.com', 'netflix.com', 'cnn.com', 'wordpress.org', 'adobe.com',
+    'github.com', 'nytimes.com', 'stackoverflow.com', 'craigslist.org', 'imdb.com', 'espn.com', 'nasa.gov', 'weather.com', 'pinterest.com',
+    'bbc.co.uk', 'nike.com', 'spotify.com', 'nationalgeographic.com', 'forbes.com', 'cnbc.com', 'hulu.com', 'whitehouse.gov', 'npr.org',
+    'usnews.com', 'oracle.com', 'nintendo.com', 'cbsnews.com', 'huffpost.com', 'harvard.edu', 'britannica.com' ];

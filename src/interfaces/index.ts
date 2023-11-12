@@ -11,3 +11,7 @@ export * from './sentence';
 export * from './time';
 export * from './url';
 export * from './email';
+export * from './zipCode';
+export * from './country';
+export * from './city';
+export * from './currency';

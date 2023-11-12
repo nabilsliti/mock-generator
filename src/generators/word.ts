@@ -1,4 +1,4 @@
-import { getRandomItem } from '../utils';
+import { getRandomValue } from '../utils';
 import { IWord } from '../interfaces';
 import { loremIpsum } from 'lorem-ipsum';
 
@@ -12,7 +12,7 @@ import { loremIpsum } from 'lorem-ipsum';
  */
 export const generateRandomWord = ({ _values_, _prefix_ = '', _suffix_ = '' }: Partial<IWord> = {}): string => {
     if (Boolean(_values_?.length)) {
-        return getRandomItem(_values_);
+        return getRandomValue(_values_);
     }
     const word = loremIpsum({
         count: 1,

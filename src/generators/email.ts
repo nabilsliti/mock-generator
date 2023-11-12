@@ -1,6 +1,6 @@
 import { EMAIL_DOMAINS } from '../constants';
 import { generateRandomWord } from './word';
-import { getRandomItem } from '../utils';
+import { getRandomValue } from '../utils';
 import { IEmail } from '../interfaces';
 
 /**
@@ -13,10 +13,10 @@ import { IEmail } from '../interfaces';
  */
 export const generateRandomEmail = ({ _values_, _usernames_, _domains_ }: Partial<IEmail> = {}): string => {
     if (Boolean(_values_?.length)) {
-        return getRandomItem(_values_);
+        return getRandomValue(_values_);
     }
 
-    const username = Boolean(_usernames_?.length) ? getRandomItem(_usernames_) : `${ generateRandomWord({ _prefix_: 'user.' }) }`;
-    const domain = Boolean(_domains_?.length) ? getRandomItem(_domains_) : getRandomItem(EMAIL_DOMAINS);
+    const username = Boolean(_usernames_?.length) ? getRandomValue(_usernames_) : `${ generateRandomWord({ _prefix_: 'user.' }) }`;
+    const domain = Boolean(_domains_?.length) ? getRandomValue(_domains_) : getRandomValue(EMAIL_DOMAINS);
     return `${ username }@${ domain }`;
 };

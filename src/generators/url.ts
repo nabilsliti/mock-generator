@@ -1,6 +1,6 @@
 import { DOMAINS, PROTOCOLS } from '../constants';
 import { generateRandomWord } from './word';
-import { getRandomItem } from '../utils';
+import { getRandomValue } from '../utils';
 import { IUrl } from '../interfaces';
 
 /**
@@ -15,14 +15,14 @@ import { IUrl } from '../interfaces';
  */
 export const generateRandomUrl = ({ _values_, _protocols_, _domains_, _ports_, _paths_ }: Partial<IUrl> = {}): string => {
     if (Boolean(_values_?.length)) {
-        return getRandomItem(_values_);
+        return getRandomValue(_values_);
     }
 
-    const randomProtocol = Boolean(_protocols_?.length) ? getRandomItem(_protocols_) : getRandomItem(PROTOCOLS);
-    const randomDomain = Boolean(_domains_?.length) ? getRandomItem(_domains_) : getRandomItem(DOMAINS);
-    const randomPort = Boolean(_ports_?.length) ? `:${ getRandomItem(_ports_) }` : '';
+    const randomProtocol = Boolean(_protocols_?.length) ? getRandomValue(_protocols_) : getRandomValue(PROTOCOLS);
+    const randomDomain = Boolean(_domains_?.length) ? getRandomValue(_domains_) : getRandomValue(DOMAINS);
+    const randomPort = Boolean(_ports_?.length) ? `:${ getRandomValue(_ports_) }` : '';
     const randomPath = Boolean(_paths_?.length) ?
-        getRandomItem(_paths_) :
+        getRandomValue(_paths_) :
         `/${ generateRandomWord() }`;
 
     return `${ randomProtocol }://${ randomDomain }${ randomPort }${ randomPath }`;

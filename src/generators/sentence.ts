@@ -1,4 +1,4 @@
-import { getRandomItem } from '../utils';
+import { getRandomValue } from '../utils';
 import { ISentence } from '../interfaces';
 import { loremIpsum } from 'lorem-ipsum';
 import { MAXIMUM_WORD, MINIMUM_WORD } from '../constants';
@@ -13,7 +13,7 @@ import { MAXIMUM_WORD, MINIMUM_WORD } from '../constants';
  */
 export const generateRandomSentence = ({ _values_, _min_ = MINIMUM_WORD, _max_ = MAXIMUM_WORD }: Partial<ISentence> = {}): string => {
     if (Boolean(_values_?.length)) {
-        return getRandomItem(_values_);
+        return getRandomValue(_values_);
     }
     return loremIpsum({
         count: 1,

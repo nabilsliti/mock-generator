@@ -2,6 +2,10 @@ import { DEFAULT_ARRAY_LENGTH } from './constants';
 import { EKeys, EType } from './enums';
 import {
     generateRandomBoolean,
+    generateRandomCity,
+    generateRandomCountry,
+    generateRandomCountryCode,
+    generateRandomCurrency,
     generateRandomDate,
     generateRandomDateTime,
     generateRandomEmail,
@@ -14,10 +18,15 @@ import {
     generateRandomUrl,
     generateRandomWord
 } from './generators';
-import { getRandomItem } from './utils';
+import { generateRandomZipCode } from './generators/zipCode';
+import { getRandomValue } from './utils';
 import {
+    ICity,
     ICollection,
     ICollectionField,
+    ICountry,
+    ICountryCode,
+    ICurrency,
     IDate,
     IDateTime,
     IEmail,
@@ -29,7 +38,8 @@ import {
     ISimpleField,
     ITime,
     IUrl,
-    IWord
+    IWord,
+    IZipCode
 } from './interfaces';
 
 /**
@@ -77,6 +87,21 @@ const generateRandomDatum = (type: ISimpleField | ICollectionField, options: IOp
         case EType.URL:
             return generateRandomUrl(options as Partial<IUrl>);
 
+        case EType.ZIP_CODE:
+            return generateRandomZipCode(options as Partial<IZipCode>);
+
+        case EType.CITY:
+            return generateRandomCity(options as Partial<ICity>);
+
+        case EType.COUNTRY:
+            return generateRandomCountry(options as Partial<ICountry>);
+
+        case EType.COUNTRY_CODE:
+            return generateRandomCountryCode(options as Partial<ICountryCode>);
+
+        case EType.CURRENCY:
+            return generateRandomCurrency(options as Partial<ICurrency>);
+
         case EType.OBJECT: {
             const objectData: ICollection = {};
             for (const key in options as ICollection) {
@@ -98,7 +123,7 @@ const generateRandomDatum = (type: ISimpleField | ICollectionField, options: IOp
         }
 
         case EType.CUSTOM:
-            return getRandomItem(options[ EKeys.VALUES ]);
+            return getRandomValue(options[ EKeys.VALUES ]);
 
         case EType.UNDEFINED:
             return undefined;

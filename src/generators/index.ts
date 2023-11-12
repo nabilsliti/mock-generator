@@ -10,3 +10,5 @@ export * from './regex';
 export * from './word';
 export * from './sentence';
 export * from './url';
+export * from './zipCode';
+export * from './country-city-currency';
