@@ -7,4 +7,4 @@ import RandExp from 'randexp';
  * @param {RegExp} options._regex_ - The regex pattern used to generate the value
  * @returns {string} random value matching the regex pattern
  */
-export const generateRandomRegex = ({ _regex_ }: Partial<IRegex>) => new RandExp(_regex_).gen();
+export const generateRandomRegex = ({ _regex_ }: Partial<IRegex>): string => new RandExp(_regex_).gen();

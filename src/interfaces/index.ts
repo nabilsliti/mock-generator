@@ -15,3 +15,4 @@ export * from './zipCode';
 export * from './country';
 export * from './city';
 export * from './currency';
+export * from './cardNumber';

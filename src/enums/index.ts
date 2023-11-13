@@ -27,5 +27,6 @@ export enum EType {
     COUNTRY = 'country',
     CITY = 'city',
     CURRENCY = 'currency',
-    COUNTRY_CODE = 'countryCode'
+    COUNTRY_CODE = 'countryCode',
+    CARD_NUMBER = 'cardNumber',
 }
