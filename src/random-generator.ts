@@ -2,6 +2,7 @@ import { DEFAULT_ARRAY_LENGTH } from './constants';
 import { EKeys, EType } from './enums';
 import {
     generateRandomBoolean,
+    generateRandomCardNumber,
     generateRandomCity,
     generateRandomCountry,
     generateRandomCountryCode,
@@ -23,6 +24,7 @@ import {
 import { generateRandomZipCode } from './generators/zipCode';
 import { getRandomValue } from './utils';
 import {
+    ICardNumber,
     ICity,
     ICollection,
     ICollectionField,
@@ -105,6 +107,9 @@ const generateRandomDatum = (type: ISimpleField | ICollectionField, options: IOp
 
         case EType.CURRENCY:
             return generateRandomCurrency(options as Partial<ICurrency>);
+
+        case EType.CARD_NUMBER:
+            return generateRandomCardNumber(options as Partial<ICardNumber>);
 
         case EType.CREDIT_CARD:
             return generateRandomCreditCard(options as Partial<ICreditCard>);

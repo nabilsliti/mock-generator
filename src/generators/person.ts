@@ -5,10 +5,11 @@ import { IPerson } from '../interfaces';
 /**
  * Generate a random person
  * @param {Partial<IWord>} options
- * @param {Array<string>} options._values_ - Predefined list of person to be used to generate a person
+ * @param {Array<string>} options._firstNames_ - Predefined list of first names to be used to generate a first name
+ * @param {Array<string>} options._lastNames_ - Predefined list of last names to be used to generate a last name
  * @returns {string} random person
  */
-export const generateRandomPerson = ({ _values_ }: Partial<IPerson> = {}) => ({
-    firstName: Boolean(_values_?._firstName_?.length) ? getRandomValue(_values_._firstName_) : getRandomValue(FIRST_NAMES),
-    lastName: Boolean(_values_?._lastName_?.length) ? getRandomValue(_values_._lastName_) : getRandomValue(LAST_NAMES)
+export const generateRandomPerson = ({ _firstNames_, _lastNames_ }: Partial<IPerson> = {}) => ({
+    firstName: Boolean(_firstNames_?.length) ? getRandomValue(_firstNames_) : getRandomValue(FIRST_NAMES),
+    lastName: Boolean(_lastNames_?.length) ? getRandomValue(_lastNames_) : getRandomValue(LAST_NAMES)
 });

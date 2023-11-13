@@ -8,8 +8,6 @@ import { EType } from '../enums';
  */
 export interface IPerson {
     _type_: EType.PERSON;
-    _values_?: {
-        _firstName_?: Array<string>;
-        _lastName_?: Array<string>;
-    };
+    _firstNames_?: Array<string>;
+    _lastNames_?: Array<string>;
 }

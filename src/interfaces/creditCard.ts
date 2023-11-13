@@ -13,11 +13,21 @@ export type vendor = 'americanExpress' | 'discoverCard' | 'masterCard' | 'visa' 
 export interface ICreditCard {
     _type_: EType.CREDIT_CARD;
     _vendors_?: Array<vendor>;
-    _values_?: {
-        _vendors_?: Array<vendor>;
-        _numbers_?: Array<string>,
-        _expirationDate_?: Array<string>,
-        _ccv_?: Array<string>,
-        _holderName_?: Array<string>
-    };
+    _numbers_?: Array<string>,
+    _expirationDates_?: Array<string>,
+    _ccv_?: Array<string>,
+    _holderNames_?: Array<string>
+}
+
+/**
+ * Card number interface
+ * @interface
+ * @property {string} _type_ - Card number type (always 'cardNumber')
+ * @property {string} _vondors_ - The list of payment vendors ('visa' | 'masterCard' | 'americanExpress' | 'discoverCard')
+ * @property {number} _numbers_ - Predefined list of card numbers to be used to generate a card number
+ */
+export interface ICardNumber {
+    _type_: EType.CARD_NUMBER;
+    _vendors_?: Array<vendor>;
+    _numbers_?: Array<string>,
 }
