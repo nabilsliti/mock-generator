@@ -2,10 +2,10 @@ import { DEFAULT_ARRAY_LENGTH } from './constants';
 import { EKeys, EType } from './enums';
 import {
     generateRandomBoolean,
-    generateRandomCardNumber,
     generateRandomCity,
     generateRandomCountry,
     generateRandomCountryCode,
+    generateRandomCreditCard,
     generateRandomCurrency,
     generateRandomDate,
     generateRandomDateTime,
@@ -13,6 +13,7 @@ import {
     generateRandomId,
     generateRandomIPAddress,
     generateRandomNumber,
+    generateRandomPerson,
     generateRandomRegex,
     generateRandomSentence,
     generateRandomTime,
@@ -22,18 +23,19 @@ import {
 import { generateRandomZipCode } from './generators/zipCode';
 import { getRandomValue } from './utils';
 import {
-    ICardNumber,
     ICity,
     ICollection,
     ICollectionField,
     ICountry,
     ICountryCode,
+    ICreditCard,
     ICurrency,
     IDate,
     IDateTime,
     IEmail,
     INumber,
     IOptions,
+    IPerson,
     IRegex,
     ISchema,
     ISentence,
@@ -104,8 +106,11 @@ const generateRandomDatum = (type: ISimpleField | ICollectionField, options: IOp
         case EType.CURRENCY:
             return generateRandomCurrency(options as Partial<ICurrency>);
 
-        case EType.CARD_NUMBER:
-            return generateRandomCardNumber(options as Partial<ICardNumber>);
+        case EType.CREDIT_CARD:
+            return generateRandomCreditCard(options as Partial<ICreditCard>);
+
+        case EType.PERSON:
+            return generateRandomPerson(options as Partial<IPerson>);
 
         case EType.OBJECT: {
             const objectData: ICollection = {};

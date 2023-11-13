@@ -1,12 +1,12 @@
 import { addYears, compareAsc, differenceInMilliseconds, format } from 'date-fns';
-import { FORMAT_DATE_TIME, START_DATE } from '../constants';
+import { FORMAT_DATE_TIME, GAP_MAX_YEARS, START_DATE } from '../constants';
 import { IDateTime } from '../interfaces';
 
 /**
  * Generate a random dateTime value
  * @param {Partial<IDateTime>} options
  * @param {Date} options._min_ - The minimum dateTime to generate (default START_DATE = new Date())
- * @param {Date} options._max_ - The maximum dateTime to generate (default START_DATE + 1 year)
+ * @param {Date} options._max_ - The maximum dateTime to generate (default START_DATE + GAP_MAX_YEARS)
  * @param {string} options._format_ - The format (date-fns) of the dateTime value to generate
  * (default FORMAT_DATE_TIME = `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`)
  * @param {ICollection} options._options_ - Date-fns format options
@@ -27,7 +27,7 @@ export const generateRandomDateTime = ({
     _format_ = FORMAT_DATE_TIME,
     _options_
 }: Partial<IDateTime> = {}): string => {
-    _max_ ||= addYears(new Date(), 1);
+    _max_ ||= addYears(new Date(), GAP_MAX_YEARS);
     if (compareAsc(_min_, _max_) > 0) {
         throw new Error(`Minimum date (${ _max_ }) cannot exceed maximum date (${ _max_ }).`,);
     }

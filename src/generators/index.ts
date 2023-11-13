@@ -12,4 +12,5 @@ export * from './sentence';
 export * from './url';
 export * from './zipCode';
 export * from './country-city-currency';
-export * from './cardNumber';
+export * from './creditCard';
+export * from './person';

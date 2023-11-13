@@ -28,5 +28,6 @@ export enum EType {
     CITY = 'city',
     CURRENCY = 'currency',
     COUNTRY_CODE = 'countryCode',
-    CARD_NUMBER = 'cardNumber',
+    CREDIT_CARD = 'creditCard',
+    PERSON = 'person',
 }

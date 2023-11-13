@@ -6,7 +6,7 @@ import { IDate } from '../interfaces';
  * Generate a random date value
  * @param {Partial<IDate>} options
  * @param {Date} options._min_ - The minimum date to generate (default START_DATE = new Date())
- * @param {Date} options._max_ - The maximum date to generate (default START_DATE + 1 year)
+ * @param {Date} options._max_ - The maximum date to generate (default START_DATE + GAP_MAX_YEARS)
  * @param {string} options._format_ - The format (date-fns) of the date value to generate  (default FORMAT_DATE = 'dd/MM/yyyy')
  * @param {ICollection} options._options_ - Date-fns format options
  *  `_options_ = {
